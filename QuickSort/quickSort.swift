@@ -28,13 +28,10 @@ func quickSort<T: Comparable>(_ arr: inout [T], _ start: Int, _ end: Int) {
 func partition<T: Comparable>(_ arr: inout [T], _ start: Int, _ end: Int) -> Int {
   // TODO
   var low = start
-  print(start, " and ", end)
   for i in start..<end{
     if arr[i] < arr[end] {
-      print(arr)
       arr.swapAt(low, i)
       low += 1
-      print(arr)
     }
   }
   arr.swapAt(low, end)
